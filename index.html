@@ -1,15 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Static image</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404</title>
   <style>
-    body { margin: 0; }
-    img { display: block; max-width: 100%; height: auto; }
+    body, html { 
+      margin:0; height:100%; 
+      background:#000; 
+      color:#fff; 
+      font-family: 'Courier New', monospace; 
+      display:flex; flex-direction:column; 
+      align-items:center; justify-content:center; 
+      text-align:center; 
+      overflow:hidden;
+    }
+    .error { 
+      font-size: 120px; 
+      font-weight: bold; 
+      letter-spacing: 8px; 
+      animation: glitch 2s infinite; 
+    }
+    .subtitle { 
+      font-size: 28px; 
+      margin: 20px 0; 
+      opacity: 0.8;
+    }
+    .msg { 
+      font-size: 18px; 
+      max-width: 80%; 
+      line-height: 1.6;
+    }
+    .link { 
+      color: #0f0; 
+      text-decoration: underline; 
+      animation: blink 1.5s infinite; 
+    }
+    @keyframes glitch {
+      0%, 100% { text-shadow: 0 0 10px #fff; }
+      50% { text-shadow: 5px 0 10px #f00, -5px 0 10px #0f0; }
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
   </style>
 </head>
 <body>
-  <img src="pngtree-system-error-404-page-not-found-picture-image_1606570.jpg" alt="Static content">
+  <div class="error">404</div>
+  <div class="subtitle">SITO NON TROVATO</div>
+  <div class="msg">
+    <p>L'anima che cercavi è stata <strong>cancellata</strong> dall'archivio.</p>
+    <p>Torna indietro o <span class="link">clicca qui</span> per essere dimenticato anche tu.</p>
+  </div>
 </body>
 </html>
